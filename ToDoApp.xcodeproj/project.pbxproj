@@ -21,6 +21,8 @@
 		9B7C6B191806577C00C5F209 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7C6AFB1806577C00C5F209 /* UIKit.framework */; };
 		9B7C6B211806577C00C5F209 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B7C6B1F1806577C00C5F209 /* InfoPlist.strings */; };
 		9B7C6B231806577C00C5F209 /* ToDoAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7C6B221806577C00C5F209 /* ToDoAppTests.m */; };
+		9B7C6B33180659F900C5F209 /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7C6B32180659F900C5F209 /* ItemCell.m */; };
+		9B7C6B371806758200C5F209 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B7C6B361806758200C5F209 /* ItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		9B7C6B1E1806577C00C5F209 /* ToDoAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToDoAppTests-Info.plist"; sourceTree = "<group>"; };
 		9B7C6B201806577C00C5F209 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9B7C6B221806577C00C5F209 /* ToDoAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoAppTests.m; sourceTree = "<group>"; };
+		9B7C6B31180659F900C5F209 /* ItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemCell.h; path = ../ItemCell.h; sourceTree = "<group>"; };
+		9B7C6B32180659F900C5F209 /* ItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemCell.m; path = ../ItemCell.m; sourceTree = "<group>"; };
+		9B7C6B361806758200C5F209 /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +117,9 @@
 		9B7C6AFD1806577C00C5F209 /* ToDoApp */ = {
 			isa = PBXGroup;
 			children = (
+				9B7C6B31180659F900C5F209 /* ItemCell.h */,
+				9B7C6B32180659F900C5F209 /* ItemCell.m */,
+				9B7C6B361806758200C5F209 /* ItemCell.xib */,
 				9B7C6B061806577C00C5F209 /* AppDelegate.h */,
 				9B7C6B071806577C00C5F209 /* AppDelegate.m */,
 				9B7C6B091806577C00C5F209 /* Main.storyboard */,
@@ -228,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B7C6B371806758200C5F209 /* ItemCell.xib in Resources */,
 				9B7C6B101806577C00C5F209 /* Images.xcassets in Resources */,
 				9B7C6B021806577C00C5F209 /* InfoPlist.strings in Resources */,
 				9B7C6B0B1806577C00C5F209 /* Main.storyboard in Resources */,
@@ -249,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B7C6B33180659F900C5F209 /* ItemCell.m in Sources */,
 				9B7C6B0E1806577C00C5F209 /* ViewController.m in Sources */,
 				9B7C6B081806577C00C5F209 /* AppDelegate.m in Sources */,
 				9B7C6B041806577C00C5F209 /* main.m in Sources */,
@@ -460,6 +470,7 @@
 				9B7C6B281806577C00C5F209 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B7C6B291806577C00C5F209 /* Build configuration list for PBXNativeTarget "ToDoAppTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +479,7 @@
 				9B7C6B2B1806577C00C5F209 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

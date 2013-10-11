@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ItemCell.h
 //  ToDoApp
 //
 //  Created by Pamela Ocampo on 10/9/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UINavigationBarDelegate>
-
+@interface ItemCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel *itemLabel;
 @end
