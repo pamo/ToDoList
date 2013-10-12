@@ -11,6 +11,8 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addItem;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *editItem;
 
 @end
 
@@ -22,6 +24,7 @@
 	
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+
 
     
     [self.tableView reloadData];
@@ -53,33 +56,27 @@
         cell = [[ItemCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%d - Text", indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld - Text", indexPath.row];
     return cell;
 }
 
-
-/*
- // Override to support conditional editing of the table view.
  - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
  {
- // Return NO if you do not want the specified item to be editable.
- return YES;
+     return YES;
  }
- */
-
-/*
+ 
  // Override to support editing the table view.
  - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
  {
  if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+     // To Do: add a data source and delegate
+     [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+     
  }
  else if (editingStyle == UITableViewCellEditingStyleInsert) {
  // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
  }
  }
- */
 
 /*
  // Override to support rearranging the table view.

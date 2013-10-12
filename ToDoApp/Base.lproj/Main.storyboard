@@ -31,19 +31,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DCq-ya-MMB">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DCq-ya-MMB">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DCq-ya-MMB" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="0bR-fW-zNY"/>
+                            <constraint firstAttribute="bottom" secondItem="DCq-ya-MMB" secondAttribute="bottom" id="D5t-Mn-Hcq"/>
+                            <constraint firstItem="DCq-ya-MMB" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="afE-uS-UWh"/>
+                            <constraint firstAttribute="trailing" secondItem="DCq-ya-MMB" secondAttribute="trailing" id="cLn-SA-ELQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="YiR-S9-ybg">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="01o-D0-KSW"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="wc3-97-6Pc"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="01o-D0-KSW"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wc3-97-6Pc"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="addItem" destination="wc3-97-6Pc" id="2od-rM-c2Z"/>
+                        <outlet property="editItem" destination="01o-D0-KSW" id="V56-8f-Zrk"/>
                         <outlet property="tableView" destination="DCq-ya-MMB" id="Ovs-jU-mym"/>
                     </connections>
                 </viewController>
