@@ -9,6 +9,9 @@
 #import "ItemCell.h"
 
 @implementation ItemCell
+- (IBAction)itemTextFieldTouched:(id)sender {
+}
+
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -23,7 +26,6 @@
 {
     [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
 }
 
 @end

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UINavigationBarDelegate>
-
+@property (nonatomic, strong) NSMutableArray *items;
 @end

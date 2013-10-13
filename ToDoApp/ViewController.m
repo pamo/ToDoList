@@ -13,7 +13,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *addItem;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *editItem;
-
 @end
 
 @implementation ViewController
@@ -25,15 +24,18 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 
-
-    
+    self.items = [NSMutableArray arrayWithObjects:@"Go to the gym", @"Tan", @"Laundry", nil];
     [self.tableView reloadData];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ItemCell"];
+    [self.tableView registerClass:[ItemCell class] forCellReuseIdentifier:@"ItemCell"];
 }
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void) addItemToList:(NSString *)anItem
+{
+    [self.items addObject:anItem];
 }
 
 #pragma mark - Table view data source
@@ -45,7 +47,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return [self.items count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -55,8 +57,9 @@
     if (cell == nil) {
         cell = [[ItemCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld - Text", indexPath.row];
+    cell.textField.text = [self.items objectAtIndex:indexPath.row];
+
+    [cell setEditing:YES animated:YES];
     return cell;
 }
 

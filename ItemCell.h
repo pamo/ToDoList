@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ItemCell : UITableViewCell
-@property (nonatomic, weak) IBOutlet UILabel *itemLabel;
+@property (strong, nonatomic) IBOutlet UITextField *textField;
 @end
