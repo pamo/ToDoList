@@ -10,6 +10,7 @@
 
 @implementation ItemCell
 - (IBAction)itemTextFieldTouched:(id)sender {
+    NSLog(@"Touch event");
 }
 
 

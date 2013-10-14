@@ -25,7 +25,7 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
-                <outlet property="textField" destination="Kcu-JI-PFK" id="P89-9u-SVP"/>
+                <outlet property="inputField" destination="Kcu-JI-PFK" id="FWz-De-9dF"/>
             </connections>
         </tableViewCell>
     </objects>

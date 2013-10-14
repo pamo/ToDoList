@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ItemCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UITextField *textField;
+@property (strong, nonatomic) IBOutlet UITextField *inputField;
 @end

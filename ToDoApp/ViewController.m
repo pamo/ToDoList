@@ -57,9 +57,11 @@
     if (cell == nil) {
         cell = [[ItemCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.textField.text = [self.items objectAtIndex:indexPath.row];
-
+    
     [cell setEditing:YES animated:YES];
+    cell.inputField.text = [self.items objectAtIndex:indexPath.row];
+    NSLog(@"%@", [self.items objectAtIndex:indexPath.row]);
+
     return cell;
 }
 
