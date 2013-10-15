@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ItemCell : UITableViewCell
+- (IBAction)changeItemText:(id)sender;
+- (IBAction)touchItemField:(id)sender;
 @property (strong, nonatomic) IBOutlet UITextField *inputField;
 @end

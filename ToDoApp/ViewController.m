@@ -26,7 +26,8 @@
 
     self.items = [NSMutableArray arrayWithObjects:@"Go to the gym", @"Tan", @"Laundry", nil];
     [self.tableView reloadData];
-    [self.tableView registerClass:[ItemCell class] forCellReuseIdentifier:@"ItemCell"];
+    UINib *nib = [UINib nibWithNibName:@"ItemCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"ItemCell"];
 }
 - (void)didReceiveMemoryWarning
 {

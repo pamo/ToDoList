@@ -9,10 +9,6 @@
 #import "ItemCell.h"
 
 @implementation ItemCell
-- (IBAction)itemTextFieldTouched:(id)sender {
-    NSLog(@"Touch event");
-}
-
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -28,5 +24,11 @@
     [super setSelected:selected animated:animated];
 
 }
-
+-(IBAction)changeItemText:(id)sender{
+    UITextField *textField = sender;
+    NSLog(@"Item changed to %@", textField.text);
+}
+- (IBAction)touchItemField:(id)sender {
+    NSLog(@"Textfield touched");
+}
 @end
