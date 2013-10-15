@@ -16,6 +16,9 @@
 @end
 
 @implementation ViewController
+- (IBAction)editOrder:(id)sender {
+    
+}
 
 - (void)viewDidLoad
 {
@@ -28,15 +31,18 @@
     [self.tableView reloadData];
     UINib *nib = [UINib nibWithNibName:@"ItemCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"ItemCell"];
+    
 }
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void) addItemToList:(NSString *)anItem
-{
-    [self.items addObject:anItem];
+- (IBAction)reorderItems:(id)sender {
+    [self.tableView setEditing:YES animated:YES];
+}
+- (IBAction)addItems:(id)sender {
+
 }
 
 #pragma mark - Table view data source
@@ -75,30 +81,36 @@
  - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
  {
  if (editingStyle == UITableViewCellEditingStyleDelete) {
-     // To Do: add a data source and delegate
+     [self.items removeObjectAtIndex:indexPath.row];
      [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-     
+
  }
  else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+
+     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.items.count+1 inSection:0];
+     NSArray *indexPaths = [NSArray arrayWithObject:indexPath];
+     [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:YES];
+     [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+     [self.tableView reloadData];
  }
  }
 
-/*
  // Override to support rearranging the table view.
  - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
  {
+     id buffer = [self.items objectAtIndex:fromIndexPath.row];
+     [self.items removeObjectAtIndex:fromIndexPath.row];
+     [self.items insertObject:buffer atIndex:toIndexPath.row];
+   
  }
- */
 
-/*
+
  // Override to support conditional rearranging of the table view.
  - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
  {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
+     return YES;
  }
- */
+
 
 /*
  #pragma mark - Navigation
@@ -114,4 +126,6 @@
 
 
 
+- (IBAction)editItemAction:(id)sender {
+}
 @end

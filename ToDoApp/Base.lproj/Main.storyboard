@@ -50,8 +50,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="YiR-S9-ybg">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="01o-D0-KSW"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wc3-97-6Pc"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="01o-D0-KSW">
+                            <connections>
+                                <action selector="reorderItems:" destination="vXZ-lx-hvc" id="N25-ze-tfG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wc3-97-6Pc">
+                            <connections>
+                                <action selector="addItems:" destination="vXZ-lx-hvc" id="2AX-6h-r6U"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addItem" destination="wc3-97-6Pc" id="2od-rM-c2Z"/>

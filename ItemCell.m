@@ -28,7 +28,4 @@
     UITextField *textField = sender;
     NSLog(@"Item changed to %@", textField.text);
 }
-- (IBAction)touchItemField:(id)sender {
-    NSLog(@"Textfield touched");
-}
 @end
