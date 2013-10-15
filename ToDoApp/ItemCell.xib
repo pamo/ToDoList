@@ -13,7 +13,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kcu-JI-PFK">
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kcu-JI-PFK">
                         <rect key="frame" x="20" y="7" width="280" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -24,10 +24,10 @@
                     </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Kcu-JI-PFK" firstAttribute="leading" secondItem="dpQ-ht-RUY" secondAttribute="leading" constant="20" id="DMJ-bh-oYg"/>
-                    <constraint firstAttribute="centerY" secondItem="Kcu-JI-PFK" secondAttribute="centerY" id="Jq3-dZ-kay"/>
-                    <constraint firstAttribute="trailing" secondItem="Kcu-JI-PFK" secondAttribute="trailing" constant="20" id="qdn-Ca-6We"/>
-                    <constraint firstAttribute="centerX" secondItem="Kcu-JI-PFK" secondAttribute="centerX" id="v22-10-5cV"/>
+                    <constraint firstItem="Kcu-JI-PFK" firstAttribute="top" secondItem="dpQ-ht-RUY" secondAttribute="top" constant="7" id="5pJ-ac-67m"/>
+                    <constraint firstItem="Kcu-JI-PFK" firstAttribute="leading" secondItem="dpQ-ht-RUY" secondAttribute="leading" constant="20" symbolic="YES" id="aOZ-Tj-k6n"/>
+                    <constraint firstAttribute="bottom" secondItem="Kcu-JI-PFK" secondAttribute="bottom" constant="6" id="fBU-TF-G67"/>
+                    <constraint firstAttribute="trailing" secondItem="Kcu-JI-PFK" secondAttribute="trailing" constant="20" symbolic="YES" id="xav-FC-tsq"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

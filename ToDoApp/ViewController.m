@@ -16,9 +16,6 @@
 @end
 
 @implementation ViewController
-- (IBAction)editOrder:(id)sender {
-    
-}
 
 - (void)viewDidLoad
 {
@@ -124,8 +121,4 @@
  
  */
 
-
-
-- (IBAction)editItemAction:(id)sender {
-}
 @end
