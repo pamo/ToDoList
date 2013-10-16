@@ -23,8 +23,8 @@
 	
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.items = [[NSMutableArray alloc] init];
 
-    self.items = [NSMutableArray arrayWithObjects:@"Go to the gym", @"Tan", @"Laundry", nil];
     [self.tableView reloadData];
     UINib *nib = [UINib nibWithNibName:@"ItemCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"ItemCell"];
