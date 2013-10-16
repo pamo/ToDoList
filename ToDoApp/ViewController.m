@@ -39,7 +39,11 @@
     [self.tableView setEditing:YES animated:YES];
 }
 - (IBAction)addItems:(id)sender {
+    [self.items addObject:@""];
 
+//    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    [self.tableView reloadData];
+    //TO-DO: make last cell first responder
 }
 
 #pragma mark - Table view data source
