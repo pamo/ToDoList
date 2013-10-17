@@ -27,6 +27,5 @@
 -(IBAction)changeItemText:(id)sender{
     UITextField *textField = sender;
     NSLog(@"Item changed to %@", textField.text);
-    self.inputField.text = textField.text;
 }
 @end
