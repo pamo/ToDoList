@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class ItemDataController;
 @interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UINavigationBarDelegate>
 @property (nonatomic, strong) NSMutableArray *items;
+@property (strong, nonatomic) ItemDataController *dataController;
 @end

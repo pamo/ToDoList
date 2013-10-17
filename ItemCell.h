@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @interface ItemCell : UITableViewCell
 - (IBAction)changeItemText:(id)sender;
 @property (strong, nonatomic) IBOutlet UITextField *inputField;
