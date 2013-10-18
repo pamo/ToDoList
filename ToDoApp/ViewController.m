@@ -25,7 +25,6 @@
     self.tableView.dataSource = self;
 
     self.items = [NSMutableArray arrayWithObjects:@"Go to the gym", @"Tan", @"Laundry", nil];
-    [self.tableView reloadData];
     UINib *nib = [UINib nibWithNibName:@"ItemCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"ItemCell"];
     
@@ -41,9 +40,13 @@
 - (IBAction)addItems:(id)sender {
     [self.items addObject:@""];
 
-//    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     [self.tableView reloadData];
-    //TO-DO: make last cell first responder
+
+}
+
+#pragma mark - Textfield Delegate
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    [self.items addObject:textField.text];
 }
 
 #pragma mark - Table view data source
@@ -64,10 +67,13 @@
     ItemCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[ItemCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        
     }
     
     [cell setEditing:YES animated:YES];
     cell.inputField.text = [self.items objectAtIndex:indexPath.row];
+    cell.inputField.delegate = self;
+    
     NSLog(@"%@", [self.items objectAtIndex:indexPath.row]);
 
     return cell;
