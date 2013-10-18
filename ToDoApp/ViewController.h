@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UINavigationBarDelegate, UITextFieldDelegate>
-@property (nonatomic, strong) NSMutableArray *items;
+@property (nonatomic, copy) NSMutableArray *items;
 @end

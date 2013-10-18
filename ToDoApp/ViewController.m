@@ -16,7 +16,13 @@
 @end
 
 @implementation ViewController
-
+- (void)setItems:(NSMutableArray *)items{
+    if (_items != items) {
+        _items = [items mutableCopy];
+    } else {
+        _items = [NSMutableArray arrayWithObjects:@"New item", nil];
+    }
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -25,6 +31,8 @@
     self.tableView.dataSource = self;
 
     self.items = [NSMutableArray arrayWithObjects:@"Go to the gym", @"Tan", @"Laundry", nil];
+    [self.tableView reloadData];
+
     UINib *nib = [UINib nibWithNibName:@"ItemCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"ItemCell"];
     
@@ -38,15 +46,17 @@
     [self.tableView setEditing:YES animated:YES];
 }
 - (IBAction)addItems:(id)sender {
+    NSMutableArray *savedItems = self.items;
     [self.items addObject:@""];
-
     [self.tableView reloadData];
 
 }
 
 #pragma mark - Textfield Delegate
 - (void)textFieldDidEndEditing:(UITextField *)textField{
-    [self.items addObject:textField.text];
+    NSUInteger index = [self.items count]-1;
+    [self.items replaceObjectAtIndex:index withObject:textField.text];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -67,7 +77,6 @@
     ItemCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[ItemCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        
     }
     
     [cell setEditing:YES animated:YES];
@@ -117,18 +126,5 @@
  {
      return YES;
  }
-
-
-/*
- #pragma mark - Navigation
- 
- // In a story board-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- 
- */
 
 @end
