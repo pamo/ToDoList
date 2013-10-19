@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B2EC6A9180F5BC900D302F9 /* ItemDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2EC6A8180F5BC900D302F9 /* ItemDataController.m */; };
 		9B7C6AF81806577C00C5F209 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7C6AF71806577C00C5F209 /* Foundation.framework */; };
 		9B7C6AFA1806577C00C5F209 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7C6AF91806577C00C5F209 /* CoreGraphics.framework */; };
 		9B7C6AFC1806577C00C5F209 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7C6AFB1806577C00C5F209 /* UIKit.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B2EC6A7180F5BC900D302F9 /* ItemDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDataController.h; sourceTree = "<group>"; };
+		9B2EC6A8180F5BC900D302F9 /* ItemDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDataController.m; sourceTree = "<group>"; };
 		9B7C6AF41806577C00C5F209 /* ToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B7C6AF71806577C00C5F209 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9B7C6AF91806577C00C5F209 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -125,6 +128,8 @@
 				9B7C6B091806577C00C5F209 /* Main.storyboard */,
 				9B7C6B0C1806577C00C5F209 /* ViewController.h */,
 				9B7C6B0D1806577C00C5F209 /* ViewController.m */,
+				9B2EC6A7180F5BC900D302F9 /* ItemDataController.h */,
+				9B2EC6A8180F5BC900D302F9 /* ItemDataController.m */,
 				9B7C6B0F1806577C00C5F209 /* Images.xcassets */,
 				9B7C6AFE1806577C00C5F209 /* Supporting Files */,
 			);
@@ -261,6 +266,7 @@
 				9B7C6B33180659F900C5F209 /* ItemCell.m in Sources */,
 				9B7C6B0E1806577C00C5F209 /* ViewController.m in Sources */,
 				9B7C6B081806577C00C5F209 /* AppDelegate.m in Sources */,
+				9B2EC6A9180F5BC900D302F9 /* ItemDataController.m in Sources */,
 				9B7C6B041806577C00C5F209 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
